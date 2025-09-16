@@ -33,20 +33,18 @@ body {
     height: 100%;
     background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
     background-size: 30px 30px;
-    z-index: -2; /* canvas보다 뒤에 오도록 z-index 변경 */
+    z-index: -2;
 }
 
-/* ▼▼▼ 이 부분을 추가합니다 ▼▼▼ */
 #shootingStars {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* 다른 UI 요소들 뒤에 배치 */
-    pointer-events: none; /* 마우스 이벤트 무시 */
+    z-index: -1;
+    pointer-events: none;
 }
-/* ▲▲▲ 여기까지 추가합니다 ▲▲▲ */
 
 .container {
     width: 100%;
@@ -101,6 +99,25 @@ header p {
     outline: none;
     border-color: var(--primary-accent);
     box-shadow: 0 0 15px var(--primary-accent);
+}
+
+/* 파일 업로드 버튼 스타일 */
+#csvFileInput {
+    color: #c0c0d0;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+}
+#csvFileInput::file-selector-button {
+    background-color: var(--secondary-accent);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 #analyzeButton, #downloadButton {
@@ -248,7 +265,6 @@ header p {
     box-shadow: 0 6px 20px rgba(56, 178, 172, 0.5);
 }
 
-/* 인쇄 전용 스타일은 이전과 동일하게 유지됩니다 */
 @media print {
     body * {
         visibility: hidden;

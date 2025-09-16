@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="background-pattern"></div>
-    <canvas id="shootingStars"></canvas> <div class="container">
+    <canvas id="shootingStars"></canvas>
+    
+    <div class="container">
         <header>
             <h1><i class="ph-bold ph-robot"></i> AI Security Analyst</h1>
             <p>보안 로그를 입력하여 AI 기반 분석 리포트를 받아보세요.</p>
@@ -17,7 +19,10 @@
 
         <main>
             <div class="input-container">
-                <textarea id="logInput" placeholder="이곳에 Splunk에서 복사한 로그 데이터를 붙여넣으세요..."></textarea>
+                <textarea id="logInput" placeholder="이곳에 로그 데이터를 붙여넣거나 아래 버튼으로 CSV 파일을 업로드하세요..."></textarea>
+                
+                <input type="file" id="csvFileInput" accept=".csv, .log, .txt">
+                
                 <button id="analyzeButton">
                     <i class="ph-bold ph-magnifying-glass"></i>
                     <span>분석 시작</span>
