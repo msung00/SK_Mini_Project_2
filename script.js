@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ▼▼▼ 별똥별 효과를 위한 JavaScript 코드 ▼▼▼
     const canvas = document.getElementById('shootingStars');
     const ctx = canvas.getContext('2d');
     let stars = [];
@@ -119,19 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
     class Star {
         constructor() {
             this.reset();
-            this.x = Math.random() * canvas.width; // 초기 x 위치를 무작위로 설정
-            this.y = Math.random() * canvas.height; // 초기 y 위치를 무작위로 설정
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
         }
 
         reset() {
             this.x = Math.random() * canvas.width;
-            this.y = 0; // 항상 위에서 시작
+            this.y = 0;
             this.size = Math.random() * 2 + 0.5;
-            this.speed = Math.random() * 2 + 1; // 1 ~ 3
-            this.opacity = Math.random() * 0.7 + 0.3; // 0.3 ~ 1
-            this.tailLength = Math.random() * 50 + 20; // 꼬리 길이
+            this.speed = Math.random() * 2 + 1;
+            this.opacity = Math.random() * 0.7 + 0.3;
+            this.tailLength = Math.random() * 50 + 20; 
             this.color = `rgba(255, 255, 255, ${this.opacity})`;
-            this.angle = Math.PI / 4 + (Math.random() - 0.5) * Math.PI / 8; // 대략 45도 방향
+            this.angle = Math.PI / 4 + (Math.random() - 0.5) * Math.PI / 8;
         }
 
         update() {
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.lineCap = 'round';
             
             ctx.moveTo(this.x, this.y);
-            // 꼬리 그리기 (반대 방향으로)
+            // 꼬리 그리기
             ctx.lineTo(this.x - Math.cos(this.angle) * this.tailLength, 
                        this.y - Math.sin(this.angle) * this.tailLength);
             ctx.stroke();
@@ -164,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function animateStars() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // 프레임 지우기
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
         
         stars.forEach(star => {
             star.update();
@@ -176,14 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 초기화 및 이벤트 리스너
     resizeCanvas();
-    createStars(50); // 화면에 50개의 별똥별이 떨어지도록 설정
+    createStars(50);
     animateStars();
 
     window.addEventListener('resize', resizeCanvas);
 
-    // 페이지에서 나갈 때 애니메이션 중지 (성능 최적화)
+
     window.addEventListener('beforeunload', () => {
         cancelAnimationFrame(animationFrameId);
     });
-    // ▲▲▲ 여기까지 추가합니다 ▲▲▲
+
 });
