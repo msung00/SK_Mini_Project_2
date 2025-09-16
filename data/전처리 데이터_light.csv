@@ -509,7 +509,6 @@ timestamp,src_ip,src_port,dst_ip,dst_port,protocol,flow_duration_ms,label,event_
 ,,,,80,,32139601,BENIGN,benign
 ,,,,53,,245,BENIGN,benign
 ,,,,443,,58,BENIGN,benign
-,,,,80,,248,BENIGN,benign
 ,,,,80,,52216,BENIGN,benign
 ,,,,88,,969,BENIGN,benign
 ,,,,443,,765792,BENIGN,benign
