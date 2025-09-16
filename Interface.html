@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <canvas id="shootingStars"></canvas> <div class="container">
+        <header>
+            <h1><i class="ph-bold ph-robot"></i> AI Security Analyst</h1>
+            <p>보안 로그를 입력하여 AI 기반 분석 리포트를 받아보세요.</p>
+        </header>
+
+        <main>
+            <div class="input-container">
+                <textarea id="logInput" placeholder="이곳에 Splunk에서 복사한 로그 데이터를 붙여넣으세요..."></textarea>
+                <button id="analyzeButton">
+                    <i class="ph-bold ph-magnifying-glass"></i>
+                    <span>분석 시작</span>
+                </button>
+            </div>
+
+            <div id="resultsContainer" class="results-container hidden">
+                <div id="loadingAnimation" style="display: none;">
+                    <div class="scanner"><span></span></div>
+                    <p>AI가 로그를 분석하는 중입니다...</p>
+                </div>
+                
+                <div id="reportOutput"></div>
+            </div>
+
+            <button id="downloadButton" class="hidden">
+                <i class="ph-bold ph-file-pdf"></i>
+                <span>PDF로 다운로드</span>
+            </button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
