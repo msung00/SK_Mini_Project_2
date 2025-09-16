@@ -21,40 +21,78 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsText(file);
     });
 
-    analyzeButton.addEventListener('click', () => {
+    // '분석 시작' 버튼 클릭 이벤트 (비동기 async 함수로 변경)
+    analyzeButton.addEventListener('click', async () => {
         const logData = logInput.value;
         if (!logData.trim()) {
             alert('분석할 로그 데이터를 입력해주세요.');
             return;
         }
 
+        // UI 상태 업데이트
         resultsContainer.classList.remove('hidden');
         reportOutput.innerHTML = '';
         loadingAnimation.style.display = 'block';
         downloadButton.classList.add('hidden');
         document.title = "Analyzing...";
 
-        setTimeout(() => {
-            loadingAnimation.style.display = 'none';
-            const reportData = generateMockReport(logData);
+        try {
+            // Python Flask 서버의 '/analyze' API에 POST 요청 보내기
+            const response = await fetch('http://127.0.0.1:5000/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ log_data: logData }) // 로그 데이터를 JSON 형식으로 전송
+            });
+
+            if (!response.ok) {
+                // 서버에서 4xx, 5xx 에러 응답 시 예외 발생
+                const errorData = await response.json();
+                throw new Error(errorData.error || '서버에서 알 수 없는 오류가 발생했습니다.');
+            }
+
+            // 서버로부터 받은 AI 분석 결과 (JSON)
+            const analysisResult = await response.json();
             
-            displayReportWithTyping(reportData);
+            // 받은 결과를 화면에 타이핑 효과와 함께 표시
+            displayReportWithTyping(analysisResult);
 
             downloadButton.classList.remove('hidden');
             document.title = "Analysis Complete!";
-        }, 2500);
+
+        } catch (error) {
+            console.error('API 호출 오류:', error);
+            // 에러 발생 시 사용자에게 알림
+            reportOutput.innerHTML = `<div class="report"><h2 class="danger">분석 실패</h2><p style="color: #ffcdd2;">AI 서버와 통신하는 데 실패했습니다. 서버가 실행 중인지 확인해주세요. (오류: ${error.message})</p></div>`;
+        } finally {
+            // 성공/실패 여부와 관계없이 로딩 애니메이션 숨기기
+            loadingAnimation.style.display = 'none';
+        }
     });
 
+    // PDF 다운로드 버튼 (브라우저 인쇄 기능 사용)
     downloadButton.addEventListener('click', () => {
         window.print();
     });
 
+    // 서버에서 받은 JSON 데이터를 HTML로 변환하여 화면에 표시하는 함수
     function displayReportWithTyping(data) {
+        // API 응답 구조에 맞게 화면에 표시할 데이터 객체 생성
+        const reportData = {
+            level: getLevelClass(data.threat_level),
+            icon: getIconForLevel(data.threat_level),
+            title: data.detected_anomalies && data.detected_anomalies.length > 0 ? data.detected_anomalies[0].anomaly_type : '분석 완료',
+            summary: data.log_summary || '요약 정보가 없습니다.',
+            analysis: data.detected_anomalies && data.detected_anomalies.length > 0 ? data.detected_anomalies[0].description : '특이사항이 발견되지 않았습니다.',
+            actions: data.remediation_plan ? data.remediation_plan.map(plan => `<b>[${plan.priority}]</b> ${plan.action} (이유: ${plan.reason})`) : []
+        };
+        
         const reportDiv = document.createElement('div');
         reportDiv.className = 'report';
 
         reportDiv.innerHTML = `
-            <h2 class="${data.level}"><i class="ph-bold ${data.icon}"></i><span id="reportTitle"></span></h2>
+            <h2 class="${reportData.level}"><i class="ph-bold ${reportData.icon}"></i><span id="reportTitle"></span></h2>
             <div class="summary">
                 <h3><i class="ph-bold ph-chart-bar"></i>상황 요약</h3>
                 <p id="reportSummary"></p>
@@ -70,56 +108,106 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         reportOutput.appendChild(reportDiv);
         
-        const typingSpeed = 20;
-        typewriter('reportTitle', data.title, typingSpeed);
-        typewriter('reportSummary', data.summary, typingSpeed, 500);
-        typewriter('reportAnalysis', data.analysis, typingSpeed, 1500);
+        // 타이핑 효과 적용
+        const typingSpeed = 10;
+        typewriter('reportTitle', reportData.title, typingSpeed);
+        typewriter('reportSummary', reportData.summary, typingSpeed, 500);
+        typewriter('reportAnalysis', reportData.analysis, typingSpeed, 1500);
         
         setTimeout(() => {
             const actionsList = document.getElementById('reportActions');
-            data.actions.forEach((action, index) => {
+            reportData.actions.forEach((action, index) => {
                 setTimeout(() => {
                     const li = document.createElement('li');
                     actionsList.appendChild(li);
-                    typewriter(li, action, typingSpeed);
-                }, index * 500);
+                    typewriter(li, action, typingSpeed, true); // HTML 태그를 해석하도록 설정
+                }, index * 800);
             });
         }, 2500);
     }
 
-    function typewriter(target, text, speed, delay = 0) {
-        setTimeout(() => {
-            let i = 0;
-            const targetElement = typeof target === 'string' ? document.getElementById(target) : target;
-            
-            const cursor = document.createElement('span');
-            cursor.className = 'typing-cursor';
-            targetElement.appendChild(cursor);
-
-            function type() {
-                if (i < text.length) {
-                    cursor.before(text.charAt(i));
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    cursor.remove();
-                }
-            }
-            type();
-        }, delay);
-    }
-
-    function generateMockReport(log) {
-        const lowerCaseLog = log.toLowerCase();
-        if (lowerCaseLog.includes('failed') && lowerCaseLog.includes('login')) {
-            return { level: 'danger', icon: 'ph-skull', title: '무차별 대입 공격 (Brute Force) 의심', summary: '특정 IP 주소에서 관리자 계정에 대해 짧은 시간 동안 다수의 로그인 실패가 감지되었습니다.', analysis: '자동화된 도구를 사용하여 비밀번호를 알아내려는 공격의 전형적인 패턴입니다. 성공 시 시스템 접근 권한이 탈취될 수 있습니다.', actions: ['방화벽에서 공격 근원지 IP를 즉시 차단하십시오.', '공격 대상이 된 계정을 일시적으로 잠금 처리하여 추가 공격을 방지하십시오.', '계정 잠금 정책 활성화 여부 및 임계값을 검토하십시오.'] };
-        } else if (lowerCaseLog.includes('scan') || lowerCaseLog.includes('nmap')) {
-            return { level: 'warning', icon: 'ph-binoculars', title: '포트 스캔 (Port Scan) 활동 탐지', summary: '하나의 IP 주소에서 단일 호스트의 여러 포트로 순차적인 접근이 탐지되었습니다.', analysis: '시스템의 활성화된 서비스와 잠재적 취약점을 파악하려는 정찰 활동의 초기 단계일 가능성이 높습니다.', actions: ['해당 IP의 과거 활동 로그를 검토하여 다른 의심스러운 행적을 확인하십시오.', '불필하게 외부에 노출된 포트가 있는지 방화벽 설정을 재검토하십시오.', 'IDS에서 해당 IP를 예의주시하도록 정책을 추가하십시오.'] };
-        } else {
-            return { level: 'info', icon: 'ph-check-circle', title: '분석 완료: 특이사항 없음', summary: '입력된 로그 데이터에 대한 분석이 완료되었습니다.', analysis: '탐지된 로그에서 즉각적인 조치가 필요한 심각한 위협 패턴은 발견되지 않았습니다. 지속적인 모니터링이 권장됩니다.', actions: ['주기적으로 시스템 로그를 검토하여 비정상적인 활동이 없는지 확인하십시오.', '최신 보안 패치를 적용하여 시스템을 안전하게 유지하십시오.', '중요 시스템에 대한 접근 제어 정책을 정기적으로 검토하십시오.'] };
+    // threat_level에 따라 CSS 클래스를 반환하는 함수
+    function getLevelClass(level) {
+        switch (level ? level.toLowerCase() : '') {
+            case '심각':
+            case '높음':
+                return 'danger';
+            case '중간':
+                return 'warning';
+            default:
+                return 'info';
         }
     }
 
+    // threat_level에 따라 아이콘을 반환하는 함수
+    function getIconForLevel(level) {
+        switch (level ? level.toLowerCase() : '') {
+            case '심각':
+            case '높음':
+                return 'ph-skull';
+            case '중간':
+                return 'ph-binoculars';
+            default:
+                return 'ph-check-circle';
+        }
+    }
+
+    // 타이핑 효과 함수 (HTML 태그를 처리하는 기능 추가)
+    function typewriter(target, text, speed, allowHtml = false, delay = 0) {
+        setTimeout(() => {
+            const targetElement = typeof target === 'string' ? document.getElementById(target) : target;
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            targetElement.appendChild(cursor);
+            
+            if (allowHtml) {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = text;
+                const nodes = Array.from(tempDiv.childNodes);
+                let currentNodeIndex = 0;
+                let currentTextIndex = 0;
+
+                function typeHtml() {
+                    if (currentNodeIndex < nodes.length) {
+                        const node = nodes[currentNodeIndex];
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            if (currentTextIndex < node.textContent.length) {
+                                cursor.before(node.textContent[currentTextIndex]);
+                                currentTextIndex++;
+                                setTimeout(typeHtml, speed);
+                            } else {
+                                currentNodeIndex++;
+                                currentTextIndex = 0;
+                                typeHtml();
+                            }
+                        } else {
+                            cursor.before(node.cloneNode(true));
+                            currentNodeIndex++;
+                            typeHtml();
+                        }
+                    } else {
+                        cursor.remove();
+                    }
+                }
+                typeHtml();
+
+            } else {
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        cursor.before(text.charAt(i));
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        cursor.remove();
+                    }
+                }
+                type();
+            }
+        }, delay);
+    }
+    
+    // 별똥별 효과 관련 코드
     const canvas = document.getElementById('shootingStars');
     const ctx = canvas.getContext('2d');
     let stars = [];
