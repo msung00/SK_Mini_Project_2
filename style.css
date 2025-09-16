@@ -101,7 +101,6 @@ header p {
     box-shadow: 0 0 15px var(--primary-accent);
 }
 
-/* 파일 업로드 버튼 스타일 */
 #csvFileInput {
     color: #c0c0d0;
     background-color: var(--primary-color);

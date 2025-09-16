@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('downloadButton');
     const csvFileInput = document.getElementById('csvFileInput');
 
-    // 파일 업로드 이벤트 리스너
+
     csvFileInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (!file) {
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsText(file);
     });
 
-    // '분석 시작' 버튼 클릭 이벤트
     analyzeButton.addEventListener('click', async () => {
         const logData = logInput.value;
         if (!logData.trim()) {
@@ -73,16 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayReportWithTyping(data) {
         let title = '분석 완료';
         if (data.detected_anomalies && data.detected_anomalies.length > 0) {
-            // ▼▼▼ 이 부분이 수정된 핵심 코드입니다 ▼▼▼
             title = data.detected_anomalies
-                .map(anomaly => anomaly.anomaly_type.replace('Web Attack - ', '').trim()) // 'Web Attack - ' 접두사 제거
+                .map(anomaly => anomaly.anomaly_type.replace('Web Attack - ', '').trim())
                 .join(', ') + ' 의심';
         }
 
         const reportData = {
             level: getLevelClass(data.threat_level),
             icon: getIconForLevel(data.threat_level),
-            title: title, // 위에서 생성한 간결한 제목 사용
+            title: title,
             summary: data.log_summary || '요약 정보가 없습니다.',
             analysis: data.detected_anomalies && data.detected_anomalies.length > 0 
                 ? data.detected_anomalies.map(anomaly => `<b>[${anomaly.anomaly_type}]</b> ${anomaly.description}`).join('<br><br>') 
