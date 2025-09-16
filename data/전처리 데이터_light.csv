@@ -1,0 +1,515 @@
+timestamp,src_ip,src_port,dst_ip,dst_port,protocol,flow_duration_ms,label,event_type
+,,,,80,,5185118,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5057374,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,81,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5271123,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5020638,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,1629049,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5088371,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,21405204,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,66,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,4050296,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,4139304,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,3533310,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,3533692,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5537889,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5537874,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5947237,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,20847788,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5848206,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5587532,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5294438,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,3876494,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,1595898,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,31485275,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5587804,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5597577,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,6161169,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5756528,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,69,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5457414,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5185197,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5662798,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5406316,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5869415,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5613125,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5310342,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5768922,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5501396,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5242445,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5604620,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5062105,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,7557761,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,33026758,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5295498,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,66,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5771371,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5507483,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5229184,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,78,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5709622,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5437735,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5180475,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5620327,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5359339,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5810846,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5511574,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5247601,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5727481,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5419842,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5152737,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5885177,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5623932,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,9841375,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,34047767,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5553195,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,60,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5289340,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5750530,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5489877,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5224059,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,75,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5702143,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5417724,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5155697,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5890593,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5625769,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5361780,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5800304,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5539765,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5276930,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5667031,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5407817,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5878747,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5056176,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,8801351,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,33138583,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5542077,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,35,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5259603,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5729684,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5471446,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,71,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5210466,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5654983,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5394673,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5863798,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5573904,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5310210,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5783696,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5392841,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5848224,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5576453,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5319306,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5761847,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,9834102,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,35403514,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5686937,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,60,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5419619,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5898673,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5637855,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5351955,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,42,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5827373,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5558477,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5297648,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5735629,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5474325,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5212701,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5544299,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5282518,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5758188,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5476125,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5215835,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5077436,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,8821808,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,33137000,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5609201,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,72,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5348426,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5789167,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5527176,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,46,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5235647,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5658025,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5361343,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5812829,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5542777,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5189143,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5926844,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5656301,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5381748,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5829027,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5562534,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5300328,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5792128,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,9787732,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,35070126,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5757896,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,49,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5511810,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5231608,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5729301,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5472884,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,83,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5205455,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5655292,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5390406,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5881033,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5612555,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5352289,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5842448,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5585355,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5322229,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5810638,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5559905,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5275375,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,8827875,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,34166352,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5233154,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,50,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5578909,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5316957,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5810185,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,45,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5524204,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5269996,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5766685,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5518991,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5247767,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5738475,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5485286,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5227344,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5699886,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5442987,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5948346,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5668983,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5412345,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,8598463,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,34082607,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5338534,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,93,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5831423,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5579430,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,53,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5932530,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5677170,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5418193,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5866949,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5599994,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5340731,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5843223,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5580613,Web Attack �?Brute Force,web_bruteforce
+,,,,80,,5638432,Web Attack �?XSS,web_xss
+,,,,80,,5638527,Web Attack �?XSS,web_xss
+,,,,80,,5945704,Web Attack �?XSS,web_xss
+,,,,80,,6075117,Web Attack �?XSS,web_xss
+,,,,80,,34,Web Attack �?XSS,web_xss
+,,,,80,,3958444,Web Attack �?XSS,web_xss
+,,,,80,,4020679,Web Attack �?XSS,web_xss
+,,,,80,,3607565,Web Attack �?XSS,web_xss
+,,,,80,,3607613,Web Attack �?XSS,web_xss
+,,,,80,,5607142,Web Attack �?XSS,web_xss
+,,,,80,,5906119,Web Attack �?XSS,web_xss
+,,,,80,,6236799,Web Attack �?XSS,web_xss
+,,,,80,,60168745,Web Attack �?XSS,web_xss
+,,,,80,,77,Web Attack �?XSS,web_xss
+,,,,80,,79,Web Attack �?XSS,web_xss
+,,,,80,,5431774,Web Attack �?XSS,web_xss
+,,,,80,,5138861,Web Attack �?XSS,web_xss
+,,,,80,,5846705,Web Attack �?XSS,web_xss
+,,,,80,,5028615,Web Attack �?XSS,web_xss
+,,,,80,,5175643,Web Attack �?XSS,web_xss
+,,,,80,,5879737,Web Attack �?XSS,web_xss
+,,,,80,,5296701,Web Attack �?XSS,web_xss
+,,,,80,,5032535,Web Attack �?XSS,web_xss
+,,,,80,,5500666,Web Attack �?XSS,web_xss
+,,,,80,,5212381,Web Attack �?XSS,web_xss
+,,,,80,,5915952,Web Attack �?XSS,web_xss
+,,,,80,,5378518,Web Attack �?XSS,web_xss
+,,,,80,,5116299,Web Attack �?XSS,web_xss
+,,,,80,,5532025,Web Attack �?XSS,web_xss
+,,,,80,,5262915,Web Attack �?XSS,web_xss
+,,,,80,,5995367,Web Attack �?XSS,web_xss
+,,,,80,,5447823,Web Attack �?XSS,web_xss
+,,,,80,,5869618,Web Attack �?XSS,web_xss
+,,,,80,,5285387,Web Attack �?XSS,web_xss
+,,,,80,,5994063,Web Attack �?XSS,web_xss
+,,,,80,,5419209,Web Attack �?XSS,web_xss
+,,,,80,,5105668,Web Attack �?XSS,web_xss
+,,,,80,,5529900,Web Attack �?XSS,web_xss
+,,,,80,,5243646,Web Attack �?XSS,web_xss
+,,,,80,,5977322,Web Attack �?XSS,web_xss
+,,,,80,,68115473,Web Attack �?XSS,web_xss
+,,,,80,,5150151,Web Attack �?XSS,web_xss
+,,,,80,,5867968,Web Attack �?XSS,web_xss
+,,,,80,,848,Web Attack �?XSS,web_xss
+,,,,80,,5341879,Web Attack �?XSS,web_xss
+,,,,80,,5031257,Web Attack �?XSS,web_xss
+,,,,80,,5468902,Web Attack �?XSS,web_xss
+,,,,80,,5202519,Web Attack �?XSS,web_xss
+,,,,80,,5945647,Web Attack �?XSS,web_xss
+,,,,80,,5373103,Web Attack �?XSS,web_xss
+,,,,80,,5074930,Web Attack �?XSS,web_xss
+,,,,80,,5479361,Web Attack �?XSS,web_xss
+,,,,80,,5189380,Web Attack �?XSS,web_xss
+,,,,80,,5888934,Web Attack �?XSS,web_xss
+,,,,80,,5292403,Web Attack �?XSS,web_xss
+,,,,80,,5450476,Web Attack �?XSS,web_xss
+,,,,80,,5888484,Web Attack �?XSS,web_xss
+,,,,80,,5070248,Web Attack �?XSS,web_xss
+,,,,80,,5483359,Web Attack �?XSS,web_xss
+,,,,80,,5208136,Web Attack �?XSS,web_xss
+,,,,80,,5945270,Web Attack �?XSS,web_xss
+,,,,80,,5364141,Web Attack �?XSS,web_xss
+,,,,80,,5036259,Web Attack �?XSS,web_xss
+,,,,80,,5464552,Web Attack �?XSS,web_xss
+,,,,80,,5184440,Web Attack �?XSS,web_xss
+,,,,80,,5841311,Web Attack �?XSS,web_xss
+,,,,80,,5551353,Web Attack �?XSS,web_xss
+,,,,80,,5277757,Web Attack �?XSS,web_xss
+,,,,80,,5993240,Web Attack �?XSS,web_xss
+,,,,80,,5381794,Web Attack �?XSS,web_xss
+,,,,80,,5084910,Web Attack �?XSS,web_xss
+,,,,80,,5535654,Web Attack �?XSS,web_xss
+,,,,80,,5264166,Web Attack �?XSS,web_xss
+,,,,80,,5977611,Web Attack �?XSS,web_xss
+,,,,80,,5437883,Web Attack �?XSS,web_xss
+,,,,80,,69296712,Web Attack �?XSS,web_xss
+,,,,80,,5893881,Web Attack �?XSS,web_xss
+,,,,80,,318,Web Attack �?XSS,web_xss
+,,,,80,,5327032,Web Attack �?XSS,web_xss
+,,,,80,,5031527,Web Attack �?XSS,web_xss
+,,,,80,,5487328,Web Attack �?XSS,web_xss
+,,,,80,,5006127,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,508,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5069927,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,42,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5038618,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,43,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5086516,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,48,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5006168,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,78,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5009041,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,71,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5009673,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,73,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5007460,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5012479,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5005388,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5016759,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,5009163,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,73,Web Attack �?Sql Injection,web_sql_injection
+,,,,80,,109,Web Attack �?Sql Injection,web_sql_injection
+,,,,58400,,741,BENIGN,benign
+,,,,389,,113473706,BENIGN,benign
+,,,,53,,51359,BENIGN,benign
+,,,,53,,201,BENIGN,benign
+,,,,60544,,85,BENIGN,benign
+,,,,53,,198,BENIGN,benign
+,,,,443,,5443117,BENIGN,benign
+,,,,53,,23271,BENIGN,benign
+,,,,53,,23527,BENIGN,benign
+,,,,60257,,3,BENIGN,benign
+,,,,123,,107015212,BENIGN,benign
+,,,,139,,41078,BENIGN,benign
+,,,,53,,224,BENIGN,benign
+,,,,53,,251,BENIGN,benign
+,,,,53,,237,BENIGN,benign
+,,,,53,,25117,BENIGN,benign
+,,,,443,,649805,BENIGN,benign
+,,,,53,,25525,BENIGN,benign
+,,,,53,,171,BENIGN,benign
+,,,,21,,91,BENIGN,benign
+,,,,59744,,3,BENIGN,benign
+,,,,53979,,4,BENIGN,benign
+,,,,53376,,4,BENIGN,benign
+,,,,53,,25470,BENIGN,benign
+,,,,53,,227,BENIGN,benign
+,,,,389,,27779,BENIGN,benign
+,,,,53,,91544,BENIGN,benign
+,,,,80,,91248,BENIGN,benign
+,,,,61051,,203,BENIGN,benign
+,,,,53,,31096,BENIGN,benign
+,,,,51607,,1,BENIGN,benign
+,,,,53,,183,BENIGN,benign
+,,,,53,,31617,BENIGN,benign
+,,,,80,,56,BENIGN,benign
+,,,,53,,163,BENIGN,benign
+,,,,53,,191,BENIGN,benign
+,,,,443,,4144619,BENIGN,benign
+,,,,443,,117329030,BENIGN,benign
+,,,,53,,171,BENIGN,benign
+,,,,53,,316,BENIGN,benign
+,,,,443,,1,BENIGN,benign
+,,,,53,,162,BENIGN,benign
+,,,,88,,14114,BENIGN,benign
+,,,,80,,3215363,BENIGN,benign
+,,,,53,,34922,BENIGN,benign
+,,,,53,,166,BENIGN,benign
+,,,,443,,322,BENIGN,benign
+,,,,443,,118149275,BENIGN,benign
+,,,,53,,24355,BENIGN,benign
+,,,,53,,204,BENIGN,benign
+,,,,443,,63246348,BENIGN,benign
+,,,,42037,,206,BENIGN,benign
+,,,,53,,208,BENIGN,benign
+,,,,53,,950,BENIGN,benign
+,,,,53,,162,BENIGN,benign
+,,,,443,,156,BENIGN,benign
+,,,,53,,47932,BENIGN,benign
+,,,,53,,189,BENIGN,benign
+,,,,35120,,2,BENIGN,benign
+,,,,50451,,601,BENIGN,benign
+,,,,53,,209,BENIGN,benign
+,,,,443,,28161176,BENIGN,benign
+,,,,53,,207,BENIGN,benign
+,,,,53,,197,BENIGN,benign
+,,,,443,,5056182,BENIGN,benign
+,,,,53,,99648,BENIGN,benign
+,,,,443,,13324465,BENIGN,benign
+,,,,53,,220,BENIGN,benign
+,,,,53,,143,BENIGN,benign
+,,,,53,,48485,BENIGN,benign
+,,,,443,,115664164,BENIGN,benign
+,,,,443,,15178796,BENIGN,benign
+,,,,389,,79,BENIGN,benign
+,,,,80,,5819798,BENIGN,benign
+,,,,80,,5700469,BENIGN,benign
+,,,,443,,63073798,BENIGN,benign
+,,,,443,,5636170,BENIGN,benign
+,,,,80,,115363925,BENIGN,benign
+,,,,53,,31008,BENIGN,benign
+,,,,53,,23458,BENIGN,benign
+,,,,53,,430,BENIGN,benign
+,,,,53,,30656,BENIGN,benign
+,,,,53,,44551100,BENIGN,benign
+,,,,443,,5280296,BENIGN,benign
+,,,,34394,,120,BENIGN,benign
+,,,,53,,24241,BENIGN,benign
+,,,,42801,,73,BENIGN,benign
+,,,,53,,260,BENIGN,benign
+,,,,61457,,41,BENIGN,benign
+,,,,53,,208,BENIGN,benign
+,,,,53,,200,BENIGN,benign
+,,,,53,,152,BENIGN,benign
+,,,,53,,115652122,BENIGN,benign
+,,,,53,,183,BENIGN,benign
+,,,,32798,,50,BENIGN,benign
+,,,,53,,216,BENIGN,benign
+,,,,60734,,66,BENIGN,benign
+,,,,53,,24079,BENIGN,benign
+,,,,53,,187,BENIGN,benign
+,,,,53,,210,BENIGN,benign
+,,,,443,,60781744,BENIGN,benign
+,,,,53,,218,BENIGN,benign
+,,,,443,,66798077,BENIGN,benign
+,,,,53,,291212,BENIGN,benign
+,,,,80,,115736977,BENIGN,benign
+,,,,80,,115221687,BENIGN,benign
+,,,,443,,4,BENIGN,benign
+,,,,60088,,194,BENIGN,benign
+,,,,443,,115439890,BENIGN,benign
+,,,,49534,,149,BENIGN,benign
+,,,,53,,207,BENIGN,benign
+,,,,443,,56,BENIGN,benign
+,,,,53,,24282,BENIGN,benign
+,,,,53,,38712,BENIGN,benign
+,,,,53,,32811,BENIGN,benign
+,,,,53,,46500,BENIGN,benign
+,,,,443,,115637438,BENIGN,benign
+,,,,80,,5687726,BENIGN,benign
+,,,,53,,31330,BENIGN,benign
+,,,,443,,631636,BENIGN,benign
+,,,,53,,23365,BENIGN,benign
+,,,,53,,23891,BENIGN,benign
+,,,,53,,24188,BENIGN,benign
+,,,,80,,13750918,BENIGN,benign
+,,,,53,,229,BENIGN,benign
+,,,,443,,1,BENIGN,benign
+,,,,55288,,60,BENIGN,benign
+,,,,123,,112120720,BENIGN,benign
+,,,,443,,65410150,BENIGN,benign
+,,,,443,,16264091,BENIGN,benign
+,,,,53,,248,BENIGN,benign
+,,,,5353,,63752405,BENIGN,benign
+,,,,443,,115249060,BENIGN,benign
+,,,,22,,1370968,BENIGN,benign
+,,,,33920,,758,BENIGN,benign
+,,,,389,,0,BENIGN,benign
+,,,,49859,,205,BENIGN,benign
+,,,,389,,442,BENIGN,benign
+,,,,53,,73541,BENIGN,benign
+,,,,53,,111728,BENIGN,benign
+,,,,88,,1059,BENIGN,benign
+,,,,443,,5204924,BENIGN,benign
+,,,,53,,105328,BENIGN,benign
+,,,,389,,10998763,BENIGN,benign
+,,,,443,,5891867,BENIGN,benign
+,,,,0,,95260141,BENIGN,benign
+,,,,53,,191,BENIGN,benign
+,,,,80,,5212330,BENIGN,benign
+,,,,53,,251255,BENIGN,benign
+,,,,443,,32242,BENIGN,benign
+,,,,53,,23897,BENIGN,benign
+,,,,50944,,772,BENIGN,benign
+,,,,53,,173,BENIGN,benign
+,,,,34108,,26,BENIGN,benign
+,,,,53,,172,BENIGN,benign
+,,,,443,,3,BENIGN,benign
+,,,,53,,239,BENIGN,benign
+,,,,88,,3370,BENIGN,benign
+,,,,53,,156545,BENIGN,benign
+,,,,53,,183396,BENIGN,benign
+,,,,38446,,211,BENIGN,benign
+,,,,53,,179,BENIGN,benign
+,,,,53,,173,BENIGN,benign
+,,,,4537,,80,BENIGN,benign
+,,,,51661,,3,BENIGN,benign
+,,,,80,,5078342,BENIGN,benign
+,,,,443,,61924227,BENIGN,benign
+,,,,53,,161,BENIGN,benign
+,,,,443,,5084914,BENIGN,benign
+,,,,53,,268,BENIGN,benign
+,,,,123,,181,BENIGN,benign
+,,,,53,,201,BENIGN,benign
+,,,,33817,,107,BENIGN,benign
+,,,,53,,369284,BENIGN,benign
+,,,,53,,190,BENIGN,benign
+,,,,53,,46920,BENIGN,benign
+,,,,53,,48227,BENIGN,benign
+,,,,46414,,55,BENIGN,benign
+,,,,443,,5034340,BENIGN,benign
+,,,,53,,61408,BENIGN,benign
+,,,,53,,554,BENIGN,benign
+,,,,80,,1925,BENIGN,benign
+,,,,53,,44238,BENIGN,benign
+,,,,51992,,200,BENIGN,benign
+,,,,443,,117302124,BENIGN,benign
+,,,,53,,23462,BENIGN,benign
+,,,,443,,4162524,BENIGN,benign
+,,,,443,,197,BENIGN,benign
+,,,,61991,,328456,BENIGN,benign
+,,,,80,,5842487,BENIGN,benign
+,,,,53,,100473,BENIGN,benign
+,,,,80,,115943974,BENIGN,benign
+,,,,54141,,143455,BENIGN,benign
+,,,,80,,23360,BENIGN,benign
+,,,,53,,34189,BENIGN,benign
+,,,,53,,192,BENIGN,benign
+,,,,53,,30968,BENIGN,benign
+,,,,50799,,3,BENIGN,benign
+,,,,53,,62164,BENIGN,benign
+,,,,22,,1319095,BENIGN,benign
+,,,,53,,309250,BENIGN,benign
+,,,,443,,116560215,BENIGN,benign
+,,,,53,,175,BENIGN,benign
+,,,,80,,32139601,BENIGN,benign
+,,,,53,,245,BENIGN,benign
+,,,,443,,58,BENIGN,benign
+,,,,80,,248,BENIGN,benign
+,,,,80,,52216,BENIGN,benign
+,,,,88,,969,BENIGN,benign
+,,,,443,,765792,BENIGN,benign
