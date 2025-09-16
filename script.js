@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsText(file);
     });
 
-    // '분석 시작' 버튼 클릭 이벤트 (비동기 async 함수로 변경)
+    // '분석 시작' 버튼 클릭 이벤트
     analyzeButton.addEventListener('click', async () => {
         const logData = logInput.value;
         if (!logData.trim()) {
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // UI 상태 업데이트
         resultsContainer.classList.remove('hidden');
         reportOutput.innerHTML = '';
         loadingAnimation.style.display = 'block';
@@ -37,25 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.title = "Analyzing...";
 
         try {
-            // Python Flask 서버의 '/analyze' API에 POST 요청 보내기
             const response = await fetch('http://127.0.0.1:5000/analyze', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ log_data: logData }) // 로그 데이터를 JSON 형식으로 전송
+                body: JSON.stringify({ log_data: logData })
             });
 
             if (!response.ok) {
-                // 서버에서 4xx, 5xx 에러 응답 시 예외 발생
                 const errorData = await response.json();
                 throw new Error(errorData.error || '서버에서 알 수 없는 오류가 발생했습니다.');
             }
 
-            // 서버로부터 받은 AI 분석 결과 (JSON)
             const analysisResult = await response.json();
             
-            // 받은 결과를 화면에 타이핑 효과와 함께 표시
             displayReportWithTyping(analysisResult);
 
             downloadButton.classList.remove('hidden');
@@ -63,10 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('API 호출 오류:', error);
-            // 에러 발생 시 사용자에게 알림
             reportOutput.innerHTML = `<div class="report"><h2 class="danger">분석 실패</h2><p style="color: #ffcdd2;">AI 서버와 통신하는 데 실패했습니다. 서버가 실행 중인지 확인해주세요. (오류: ${error.message})</p></div>`;
         } finally {
-            // 성공/실패 여부와 관계없이 로딩 애니메이션 숨기기
             loadingAnimation.style.display = 'none';
         }
     });
@@ -78,13 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 서버에서 받은 JSON 데이터를 HTML로 변환하여 화면에 표시하는 함수
     function displayReportWithTyping(data) {
-        // API 응답 구조에 맞게 화면에 표시할 데이터 객체 생성
+        let title = '분석 완료';
+        if (data.detected_anomalies && data.detected_anomalies.length > 0) {
+            // ▼▼▼ 이 부분이 수정된 핵심 코드입니다 ▼▼▼
+            title = data.detected_anomalies
+                .map(anomaly => anomaly.anomaly_type.replace('Web Attack - ', '').trim()) // 'Web Attack - ' 접두사 제거
+                .join(', ') + ' 의심';
+        }
+
         const reportData = {
             level: getLevelClass(data.threat_level),
             icon: getIconForLevel(data.threat_level),
-            title: data.detected_anomalies && data.detected_anomalies.length > 0 ? data.detected_anomalies[0].anomaly_type : '분석 완료',
+            title: title, // 위에서 생성한 간결한 제목 사용
             summary: data.log_summary || '요약 정보가 없습니다.',
-            analysis: data.detected_anomalies && data.detected_anomalies.length > 0 ? data.detected_anomalies[0].description : '특이사항이 발견되지 않았습니다.',
+            analysis: data.detected_anomalies && data.detected_anomalies.length > 0 
+                ? data.detected_anomalies.map(anomaly => `<b>[${anomaly.anomaly_type}]</b> ${anomaly.description}`).join('<br><br>') 
+                : '특이사항이 발견되지 않았습니다.',
             actions: data.remediation_plan ? data.remediation_plan.map(plan => `<b>[${plan.priority}]</b> ${plan.action} (이유: ${plan.reason})`) : []
         };
         
@@ -108,11 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         reportOutput.appendChild(reportDiv);
         
-        // 타이핑 효과 적용
         const typingSpeed = 10;
         typewriter('reportTitle', reportData.title, typingSpeed);
-        typewriter('reportSummary', reportData.summary, typingSpeed, 500);
-        typewriter('reportAnalysis', reportData.analysis, typingSpeed, 1500);
+        typewriter('reportSummary', reportData.summary, typingSpeed, 500, true);
+        typewriter('reportAnalysis', reportData.analysis, typingSpeed, 1500, true);
         
         setTimeout(() => {
             const actionsList = document.getElementById('reportActions');
@@ -120,13 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     const li = document.createElement('li');
                     actionsList.appendChild(li);
-                    typewriter(li, action, typingSpeed, true); // HTML 태그를 해석하도록 설정
+                    typewriter(li, action, typingSpeed, true);
                 }, index * 800);
             });
         }, 2500);
     }
 
-    // threat_level에 따라 CSS 클래스를 반환하는 함수
     function getLevelClass(level) {
         switch (level ? level.toLowerCase() : '') {
             case '심각':
@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // threat_level에 따라 아이콘을 반환하는 함수
     function getIconForLevel(level) {
         switch (level ? level.toLowerCase() : '') {
             case '심각':
@@ -152,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 타이핑 효과 함수 (HTML 태그를 처리하는 기능 추가)
     function typewriter(target, text, speed, allowHtml = false, delay = 0) {
         setTimeout(() => {
             const targetElement = typeof target === 'string' ? document.getElementById(target) : target;
